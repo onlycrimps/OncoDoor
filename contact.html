@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — OncoDoor</title>
+
+  <!-- Minimal, modern, responsive styling -->
+  <style>
+    :root{
+      --bg:#ffffff;
+      --card:#f7f8fa;
+      --muted:#666b75;
+      --accent:#0b6fb0;
+      --radius:12px;
+      --max-width:900px;
+      --gap:18px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: #111;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#ffffff 0%, #fbfdff 100%);
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:36px 18px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:32px;
+      align-items:start;
+    }
+
+    /* Stack on small screens */
+    @media (max-width:880px){
+      .container{grid-template-columns:1fr; padding:0 6px;}
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow: 0 6px 18px rgba(15,20,30,0.06);
+    }
+
+    h1{
+      margin:0 0 8px 0;
+      font-size:22px;
+      letter-spacing:-0.2px;
+    }
+    p.lead{
+      margin:0 0 18px 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.45;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    label{
+      font-size:13px;
+      color:#222;
+      display:block;
+      margin-bottom:6px;
+      font-weight:600;
+    }
+
+    .row{
+      display:flex;
+      gap:12px;
+    }
+    .row .field{flex:1;}
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea{
+      width:100%;
+      box-sizing:border-box;
+      padding:12px 14px;
+      border-radius:10px;
+      border:1px solid #dde3ea;
+      background:white;
+      font-size:14px;
+      outline:none;
+      transition:box-shadow .12s, border-color .12s;
+    }
+    input:focus, textarea:focus{
+      border-color:var(--accent);
+      box-shadow:0 6px 18px rgba(11,111,176,0.08);
+    }
+    textarea{min-height:120px; resize:vertical; font-family:inherit;}
+
+    .help { font-size:13px; color:var(--muted); margin-top:6px; }
+
+    .btn {
+      display:inline-block;
+      background:var(--accent);
+      color:white;
+      border:none;
+      padding:12px 16px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:700;
+      font-size:15px;
+      box-shadow: 0 6px 18px rgba(11,111,176,0.16);
+    }
+    .btn:disabled{opacity:.6; cursor:not-allowed; box-shadow:none}
+
+    .contact-info {
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      font-size:15px;
+      color:#222;
+    }
+
+    .contact-card {
+      background: linear-gradient(180deg,#fff 0%, #fbfdff 100%);
+      border-radius:10px;
+      padding:18px;
+      border:1px solid #eef3f8;
+    }
+
+    .info-line {display:flex; gap:12px; align-items:center;}
+    .info-line strong{display:block; font-size:14px;}
+    .muted{color:var(--muted); font-size:13px;}
+
+    .status {
+      padding:10px 12px;
+      border-radius:10px;
+      font-weight:600;
+      font-size:14px;
+      display:none;
+    }
+    .status.success { background: #ebfbf2; color:#0a7a3c; border:1px solid #dff4e6; display:block;}
+    .status.error { background:#fff3f2; color:#b02a2a; border:1px solid #ffdcd7; display:block;}
+
+    /* small footer */
+    .small {font-size:13px; color:var(--muted); margin-top:10px;}
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <!-- Left: Form -->
+    <section class="card" aria-labelledby="contact-heading">
+      <h1 id="contact-heading">Message Us</h1>
+      <p class="lead">Have a question or need a quote? Send a quick message and we’ll get back to you shortly. Or use the phone/email to contact Jake directly.</p>
+
+      <div id="statusWrap" aria-live="polite"></div>
+
+      <!-- Contact form -->
+      <!-- IMPORTANT: Replace FORM_ACTION with your Formspree endpoint or your preferred form handler URL.
+           Example Formspree action: "https://formspree.io/f/abcd1234" -->
+      <form id="contactForm" novalidate>
+        <!-- Visible fields -->
+        <div class="row">
+          <div class="field">
+            <label for="name">Full name <span aria-hidden="true" style="color:#b02a2a">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="Jane Doe">
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555">
+          </div>
+        </div>
+
+        <div>
+          <label for="email">Email <span aria-hidden="true" style="color:#b02a2a">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="jane@example.com">
+        </div>
+
+        <div>
+          <label for="message">Message <span aria-hidden="true" style="color:#b02a2a">*</span></label>
+          <textarea id="message" name="message" required placeholder="A short description of your request..."></textarea>
+          <div class="help">Keep it brief — we’ll follow up for details.</div>
+        </div>
+
+        <!-- Honeypot (hidden) to reduce spam -->
+        <div style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
+          <label>Leave this field blank<input name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <div style="display:flex; gap:12px; align-items:center; margin-top:8px;">
+          <button class="btn" id="submitBtn" type="submit">Send Message</button>
+          <div id="loading" aria-hidden="true" style="display:none;">Sending…</div>
+        </div>
+
+        <div class="small">By sending you agree to receive a reply from OncoDoor regarding your inquiry.</div>
+      </form>
+    </section>
+
+    <!-- Right: Contact details -->
+    <aside class="card contact-card" aria-labelledby="details-heading">
+      <h2 id="details-heading" style="margin-top:0; font-size:18px;">Contact</h2>
+
+      <div class="contact-info">
+        <div class="info-line">
+          <div>
+            <strong>Jake — OncoDoor</strong>
+            <div class="muted">Owner & Contact</div>
+          </div>
+        </div>
+
+        <div class="info-line">
+          <div>
+            <div class="muted">Phone</div>
+            <!-- tel: link for mobile devices -->
+            <a href="tel:+14053388222" style="text-decoration:none; color:var(--accent); font-weight:700;">(405) 338-8222</a>
+          </div>
+        </div>
+
+        <div class="info-line">
+          <div>
+            <div class="muted">Email</div>
+            <a href="mailto:jake@oncodoor.net" style="text-decoration:none; color:var(--accent); font-weight:700;">jake@oncodoor.net</a>
+          </div>
+        </div>
+
+        <div style="margin-top:6px;" class="muted">Prefer direct contact? Call or email anytime during business hours and we’ll respond promptly.</div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- JavaScript: handles submission to a form service (Formspree example).
+       IMPORTANT: Replace the value of FORM_ACTION with your form endpoint.
+       If you prefer a plain HTML post, add action="https://formspree.io/f/yourID" method="POST" to the <form> tag and remove the JS. -->
+  <script>
+    (function(){
+      const FORM_ACTION = "https://formspree.io/f/yourFormID"; // <-- REPLACE this with your Formspree endpoint
+      // Example: "https://formspree.io/f/abcd1234"
+
+      const form = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const loading = document.getElementById('loading');
+      const statusWrap = document.getElementById('statusWrap');
+
+      function showStatus(type, text){
+        statusWrap.innerHTML = "";
+        const div = document.createElement('div');
+        div.className = 'status ' + (type === 'ok' ? 'success' : 'error');
+        div.textContent = text;
+        statusWrap.appendChild(div);
+        // Auto-hide after 8s
+        setTimeout(()=> {
+          if (div.parentNode) div.parentNode.removeChild(div);
+        }, 8000);
+      }
+
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+
+        // Basic client-side validation
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+        const honeypot = form.website && form.website.value.trim();
+
+        if (honeypot) {
+          // Bot detected. Silently drop.
+          return;
+        }
+        if (!name || !email || !message) {
+          showStatus('err', 'Please fill in name, email, and message before sending.');
+          return;
+        }
+
+        // Show loading state
+        submitBtn.disabled = true;
+        loading.style.display = 'block';
+
+        // Build form data
+        const data = new FormData();
+        data.append('name', name);
+        data.append('email', email);
+        data.append('phone', form.phone.value.trim());
+        data.append('message', message);
+
+        // POST to Formspree endpoint using fetch
+        try {
+          const res = await fetch(FORM_ACTION, {
+            method: 'POST',
+            body: data,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (res.ok) {
+            form.reset();
+            showStatus('ok', 'Message sent — thanks! We will be in touch shortly.');
+          } else {
+            // Try to parse JSON response
+            let json;
+            try { json = await res.json(); } catch(e){}
+            const errMsg = (json && json.error) ? json.error : 'There was a problem sending your message. Please try again later.';
+            showStatus('err', errMsg);
+          }
+        } catch (err) {
+          showStatus('err', 'Network error — please try again or email jake@oncodoor.net directly.');
+        } finally {
+          submitBtn.disabled = false;
+          loading.style.display = 'none';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
