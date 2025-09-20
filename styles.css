@@ -208,6 +208,29 @@ background-color: #005fa3;
   }
 }
 
+/* footer formatting*/
+.site-footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.site-footer .footer-logo {
+  display: block;        /* make it block so it centers */
+  margin: 0 auto 1rem;   /* center horizontally + spacing below */
+  max-width: 120px;      /* limit size on desktop */
+  width: 30%;            /* responsive width */
+  height: auto;          /* maintain aspect ratio */
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
 @media (max-width: 768px) {
   .contact-form {
     padding: 1.5rem;
@@ -216,6 +239,17 @@ background-color: #005fa3;
 
   .contact-form button {
     width: 100%; /* full width button on small screens */
+  }
+}
+
+/* Mobile adjustments for footer */
+@media (max-width: 768px) {
+  .site-footer .footer-logo {
+    max-width: 90px;     /* smaller on mobile */
+    width: 40%;
+  }
+  .site-footer p {
+    font-size: 0.9rem;
   }
 }
 
