@@ -169,7 +169,7 @@ background-color: #005fa3;
   }
 
   .navbar ul {
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
   }
 }
