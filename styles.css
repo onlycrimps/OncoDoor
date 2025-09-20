@@ -124,3 +124,9 @@ section {
   outline: none;
   border-color: var(--accent-color);
   box-shadow: 0 0 4px rgba(0, 119, 204, 0.3);
+
+  /* Make hero section full width */
+.hero {
+  width: 100vw; /* full viewport width */
+  margin-left: calc(-50vw + 50%); /* cancels main's centering */
+}
