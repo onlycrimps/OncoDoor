@@ -158,6 +158,25 @@ article h3 {
 background-color: #005fa3;
 }
 
+/* button class formatting */
+.button {
+  background-color: #0077cc;  /* same as your contact button */
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none; /* important for links */
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #005fa3;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   .hero h1 {
@@ -185,23 +204,4 @@ background-color: #005fa3;
   }
 }
 
-
-/* button class formatting */
-.button {
-  background-color: #0077cc;  /* same as your contact button */
-  color: white;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none; /* important for links */
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #005fa3;
-}
 
