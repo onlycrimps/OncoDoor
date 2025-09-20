@@ -1,3 +1,5 @@
+/*
+<!-- sdfds --> 
 :root {
   --primary-color: #444;
   --accent-color: #0077cc;
@@ -5,7 +7,7 @@
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Prevent horizontal scrolling globally */
+
 *,
 *::before,
 *::after {
@@ -18,7 +20,7 @@ body {
   font-family: var(--font-family);
   background-color: var(--background-color);
   color: var(--primary-color);
-  overflow-x: hidden; /* removes white bar / side scroll */
+  overflow-x: hidden; 
 }
 
 header, footer {
@@ -100,9 +102,211 @@ section {
   box-shadow: 0 0 4px rgba(0, 119, 204, 0.3);
 }
 
-/* ==========================
+
+.hero {
+  background-image: url("assets/images/background_door.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  width: 100%;               
+  padding: 3rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  min-height: 60vh;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.45); 
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+    min-height: 50vh;
+    padding: 2rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  nav {
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+}
+*/
+
+:root {
+  --primary-color: #444;
+  --accent-color: #0077cc;
+  --background-color: #f8f8f8;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================
+   Global Box Sizing & Overflow
+   ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  overflow-x: hidden;  /* prevents horizontal scroll */
+}
+
+/* Make all images and media responsive */
+img, iframe, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   Header & Footer
+   ========================= */
+header, footer {
+  background-color: #222;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* wraps nav links on small screens */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+.logo {
+  max-height: 60px;
+  width: auto;
+  max-width: 100%;
+}
+
+/* =========================
+   Main Content
+   ========================= */
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #005fa3;
+}
+
+/* =========================
+   Contact Form
+   ========================= */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: var(--font-family);
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 4px rgba(0, 119, 204, 0.3);
+}
+
+/* =========================
    Hero Section - Full Width
-   ========================== */
+   ========================= */
 .hero {
   background-image: url("assets/images/background_door.jpg");
   background-size: cover;
@@ -121,6 +325,7 @@ section {
   color: white;
   position: relative;
   min-height: 60vh;
+  overflow-x: hidden;        /* prevents side scroll */
 }
 
 .hero::before {
@@ -154,10 +359,12 @@ section {
   word-wrap: break-word;
 }
 
-/* Mobile adjustments */
+/* =========================
+   Mobile Adjustments
+   ========================= */
 @media (max-width: 768px) {
   .hero {
-    background-attachment: scroll;
+    background-attachment: scroll;  /* avoids iOS issues */
     min-height: 50vh;
     padding: 2rem 1rem;
   }
@@ -172,7 +379,7 @@ section {
   }
 
   nav {
-    flex-wrap: wrap; /* ensures nav links wrap on small screens */
     justify-content: center;
+    flex-wrap: wrap;
   }
 }
