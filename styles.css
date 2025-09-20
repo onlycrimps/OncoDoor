@@ -184,3 +184,24 @@ background-color: #005fa3;
     width: 100%; /* full width button on small screens */
   }
 }
+
+
+/* button class formatting */
+.button {
+  background-color: #0077cc;  /* same as your contact button */
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none; /* important for links */
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #005fa3;
+}
+
