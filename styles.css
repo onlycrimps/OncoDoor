@@ -1,4 +1,39 @@
 /* styles.css */
+
+/* Hero Section Background */
+.hero {
+  background-image: url("assets/images/background_door.jpg"); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Creates scroll-lock effect on desktop */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  min-height: 60vh; /* Adjust depending on how tall you want it */
+  padding: 2rem;
+  color: white;
+}
+
+/* Prevent buggy behavior on mobile (iOS Safari doesn't support fixed well) */
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+    min-height: 50vh;
+    padding: 1.5rem;
+  }
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.45); /* Slight dark overlay for text readability */
+  border-radius: 1rem;
+  padding: 1.5rem;
+  max-width: 700px;
+}
+
 :root {
   --primary-color: #444;
   --accent-color: #0077cc;
