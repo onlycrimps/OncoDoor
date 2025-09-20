@@ -188,8 +188,14 @@ background-color: #005fa3;
   }
 
   .navbar ul {
-    flex-direction: row;
-    gap: 1rem;
+  list-style: none;
+  display: flex;          /* must be flex to use flex-direction */
+  flex-direction: row;    /* horizontal layout */
+  gap: 1rem;              /* spacing between links */
+  justify-content: center; /* optional: center links horizontally */
+  align-items: center;     /* vertically aligns links if they wrap */
+  margin: 0;               /* reset any default list margin */
+  padding: 0;              /* reset any default list padding */
   }
 }
 
