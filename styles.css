@@ -177,6 +177,20 @@ background-color: #005fa3;
   background-color: #005fa3;
 }
 
+.site-footer {
+  background-color: #222;     /* dark background */
+  color: white;               /* text color */
+  text-align: center;         /* center text */
+  padding: 1.5rem 1rem;       /* vertical + horizontal padding */
+  width: 100%;                /* full width */
+  box-sizing: border-box;     /* ensures padding doesn't overflow */
+}
+
+.site-footer p {
+  margin: 0;                  /* remove default margin */
+  font-size: 1rem;
+}
+
 /* adding for logo formatting */
 .section-logo {
   display: block;        /* makes it act like a block element */
@@ -208,28 +222,6 @@ background-color: #005fa3;
   }
 }
 
-/* footer formatting*/
-.site-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 1.5rem 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.site-footer .footer-logo {
-  display: block;        /* make it block so it centers */
-  margin: 0 auto 1rem;   /* center horizontally + spacing below */
-  max-width: 120px;      /* limit size on desktop */
-  width: 30%;            /* responsive width */
-  height: auto;          /* maintain aspect ratio */
-}
-
-.site-footer p {
-  margin: 0;
-  font-size: 1rem;
-}
 
 @media (max-width: 768px) {
   .contact-form {
@@ -243,13 +235,11 @@ background-color: #005fa3;
 }
 
 /* Mobile adjustments for footer */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .site-footer .footer-logo {
-    max-width: 90px;     /* smaller on mobile */
-    width: 40%;
-  }
-  .site-footer p {
-    font-size: 0.9rem;
+  .site-footer {
+    font-size: 0.9rem;        /* slightly smaller on mobile */
+    padding: 1rem 0.5rem;
   }
 }
 
