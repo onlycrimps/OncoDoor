@@ -101,15 +101,16 @@ article h3 {
   color: #222;
 }
 
-/* Ensure proper bullet points and indentation for lists */
+/* Force proper bullets and indentation for article lists */
 article ul {
-  list-style-type: disc; /* standard bullets */
-  padding-left: 1.5rem;  /* space from left edge */
-  margin-bottom: 1rem;   /* space after the list */
+  list-style-type: disc !important;  /* force standard bullets */
+  list-style-position: inside;       /* bullets inside padding */
+  padding-left: 1.5rem !important;   /* indent text from the left */
+  margin: 1rem 0;                     /* spacing above and below list */
 }
 
 article ul li {
-  margin-bottom: 0.5rem; /* space between items */
+  margin-bottom: 0.5rem;            /* spacing between items */
 }
 
 /* Contact Form Styling */
