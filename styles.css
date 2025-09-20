@@ -149,7 +149,10 @@ article h3 {
   cursor: pointer;
   align-self: flex-start;
   transition: background-color 0.3s ease;
+  z-index: 1;       /* ensure button is above other layers */
+  position: relative; /* allows z-index to take effect */
 }
+
 
 .contact-form button:hover {
   background-color: #005fa3;
