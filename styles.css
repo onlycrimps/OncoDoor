@@ -177,6 +177,15 @@ background-color: #005fa3;
   background-color: #005fa3;
 }
 
+/* adding for logo formatting */
+.section-logo {
+  display: block;        /* makes it act like a block element */
+  margin: 1rem auto;     /* centers it horizontally and adds vertical spacing */
+  max-width: 200px;      /* limits width for large screens */
+  width: 50%;            /* responsive scaling for smaller screens */
+  height: auto;          /* keeps aspect ratio */
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   .hero h1 {
