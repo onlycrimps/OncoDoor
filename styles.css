@@ -308,11 +308,12 @@ background-color: #005fa3;
 }
 
 .contact-photo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;               /* circular image */
-  object-fit: cover;
+  width: 80px;           /* sets fixed width */
+  height: 80px;          /* sets fixed height */
+  border-radius: 50%;    /* makes it circular */
+  object-fit: cover;     /* crops image to fill circle */
   border: 2px solid #0077cc;
+  display: block;        /* ensures no extra spacing */
 }
 
 .contact-info {
