@@ -163,7 +163,7 @@ article ul ul {
 
 /* Make sure the card and form scale nicely */
 .contact-card, .contact-form {
-  flex: 1 1 400px;           /* grow/shrink, min width 400px */
+  flex: 1 1 380px;           /* grow/shrink but roughly same width as other articles */
   box-sizing: border-box;
 }
 
