@@ -82,6 +82,9 @@ html, body {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 8px;
+   /* NEW: match width to articles */
+  max-width: 800px;  /* same as .blog-posts max-width */
+  margin: 0 auto;    /* center it horizontally */
 }
 
 .hero h1 {
