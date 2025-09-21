@@ -158,6 +158,7 @@ article ul ul {
   margin: 2rem auto;          /* center on page */
   flex-wrap: wrap;            /* stack on smaller screens */
   justify-content: center;    /* center horizontally */
+   align-items: stretch;  /* <--- ensures both children stretch to same height */
 }
 
 /* Make sure the card and form scale nicely */
@@ -171,6 +172,7 @@ article ul ul {
   flex-direction: column;
   gap: 0.75rem;              /* slightly smaller spacing between fields */
   background: white;
+  border-left: 4px solid #444; /* matches other content blocks */
   padding: 1rem;              /* less padding */
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);  /* lighter shadow */
