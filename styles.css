@@ -171,7 +171,7 @@ article ul ul {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;              /* slightly smaller spacing between fields */
-  background: white;
+  background: #f8f8f8;  /* subtle light gray shading to match articles */
   border-left: 4px solid #444; /* matches other content blocks */
   padding: 1rem;              /* less padding */
   border-radius: 8px;
