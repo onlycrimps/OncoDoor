@@ -147,48 +147,47 @@ article ul ul {
 }
 
 
-/* ==========================================================================
-   5. Contact Section - Stacked Card + Form
+/* ========================================================================== 
+   5. Contact Section - stacked full-width card + form
    ========================================================================== */
-
-/* Container for both card and form */
 .contact-section {
   display: flex;
-  flex-direction: column;   /* always stacked vertically */
+  flex-direction: column;   /* stack vertically */
   gap: 1.5rem;              /* spacing between card and form */
-  max-width: 800px;         /* match article width */
-  margin: 2rem auto;        /* center on page */
+  max-width: 800px;         /* container width matches other content */
+  margin: 2rem auto;        /* center container */
+  align-items: stretch;     /* ensures both blocks take full width */
 }
 
-/* Shared styling for card and form */
+/* Shared block styling */
 .contact-card,
 .contact-form {
-  background: #f8f8f8;      /* subtle gray like other articles */
+  width: 100%;              /* full width of container */
+  box-sizing: border-box;
+  background: #f8f8f8;      /* subtle gray */
   border-left: 4px solid #444;
   border-radius: 8px;
-  padding: 1rem;            /* smaller padding to reduce empty space */
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* lighter shadow */
-  box-sizing: border-box;
+  padding: 1rem;             /* equal padding for both */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* ----------------------------
-   Contact Card Styling
-   ---------------------------- */
+/* Contact Directly Card */
 .contact-card h3 {
   margin-bottom: 0.5rem;
-  font-size: 1.25rem;       /* same as Questions? header */
+  font-size: 1.25rem;       /* matches Questions? header */
 }
 
 .contact-card-content {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;          /* mobile-friendly stacking */
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;           /* stack photo/info on small screens */
 }
 
 .contact-photo {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #0077cc;
@@ -197,7 +196,7 @@ article ul ul {
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;             /* tighter spacing between items */
+  gap: 0.5rem;
 }
 
 .contact-item a {
@@ -210,13 +209,11 @@ article ul ul {
   text-decoration: underline;
 }
 
-/* ----------------------------
-   Contact Form Styling
-   ---------------------------- */
+/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;             /* smaller gap for compactness */
+  gap: 0.75rem;             /* spacing between fields */
   font-family: var(--font-family);
 }
 
@@ -228,7 +225,7 @@ article ul ul {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.5rem 0.75rem;   /* smaller inputs */
+  padding: 0.6rem 0.8rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 0.95rem;
@@ -239,7 +236,7 @@ article ul ul {
 .contact-form button {
   background-color: #0077cc;
   color: white;
-  padding: 0.5rem 1rem;      /* smaller button */
+  padding: 0.6rem 1.2rem;
   font-size: 0.95rem;
   font-weight: bold;
   border: none;
@@ -252,6 +249,7 @@ article ul ul {
 .contact-form button:hover {
   background-color: #005fa3;
 }
+
 
 /* ==========================================================================
    6. Buttons (Reusable)
@@ -405,14 +403,12 @@ article ul ul {
     margin-bottom: 1rem;
   }
 
- @media (max-width: 600px) {
-  .contact-card-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+@media (max-width: 768px) {
+  .contact-section {
+    gap: 1rem;
   }
 
-  .contact-photo {
-    margin-bottom: 0.5rem;
+  .contact-form button {
+    width: 100%;  /* full-width button on small screens */
   }
 }
