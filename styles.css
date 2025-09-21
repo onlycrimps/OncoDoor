@@ -219,17 +219,19 @@ background-color: #005fa3;
   height: auto;          /* keeps aspect ratio */
 }
 
+/* =========================
+   Meet the Team Section
+   ========================= */
+
 .meet-the-team {
-  background: #f8f8f8;
+  background: #f8f8f8;               /* matches article background */
   padding: 2rem;
-  border-left: 4px solid #444;
+  border-left: 4px solid #444;       /* consistent style with articles */
   border-radius: 4px;
-
-  max-width: 800px;          /* matches your article/blog post width */
-  margin: 0 auto 2rem auto;  /* centers it horizontally and adds bottom spacing */
-  box-sizing: border-box;    /* ensures padding doesn't break the width */
+  max-width: 800px;                   /* same as articles */
+  margin: 0 auto 2rem auto;           /* center horizontally and spacing below */
+  box-sizing: border-box;
 }
-
 
 .meet-the-team h2 {
   text-align: center;
@@ -244,23 +246,23 @@ background-color: #005fa3;
   gap: 1.5rem;
   margin-bottom: 2rem;
 
-  background: #fff;                 /* card background */
-  border-radius: 1rem;              /* rounded corners */
-  padding: 1.5rem;                  /* space around content */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* subtle card shadow */
+  background: #fff;                   /* card background */
+  border-radius: 1rem;                /* rounded corners */
+  padding: 1.5rem;                    /* space inside card */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .team-member:hover {
-  box-shadow: 0 4px 14px rgba(0,0,0,0.15); /* stronger shadow on hover */
-  transform: translateY(-2px);             /* slight "lift" effect */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transform: translateY(-2px);        /* subtle lift on hover */
 }
 
 .team-photo {
   width: 140px;
   height: 140px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 50%;                 /* circular crop */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   border: 3px solid #fff;
   background-color: #fff;
@@ -268,7 +270,7 @@ background-color: #005fa3;
 }
 
 .team-photo:hover {
-  transform: scale(1.05);
+  transform: scale(1.05);             /* bubble pop effect */
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
 }
 
@@ -281,19 +283,6 @@ background-color: #005fa3;
   line-height: 1.4;
   color: #333;
 }
-
-@media (max-width: 600px) {
-  .team-member {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .team-photo {
-    margin-bottom: 1rem;
-  }
-}
-
 
 /* Responsive */
 @media (max-width: 600px) {
@@ -338,4 +327,24 @@ background-color: #005fa3;
   }
 }
 
+/* =========================
+   Responsive Adjustments
+   ========================= */
+
+@media (max-width: 600px) {
+  .meet-the-team {
+    padding: 1.5rem;
+    width: 90%;                       /* keep consistent with other blocks */
+  }
+
+  .team-member {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .team-photo {
+    margin-bottom: 1rem;
+  }
+}
 
