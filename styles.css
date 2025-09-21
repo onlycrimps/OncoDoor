@@ -150,6 +150,22 @@ article ul ul {
 /* ==========================================================================
    5. Contact Form
    ========================================================================== */
+/* Container for both blocks */
+.contact-section {
+  display: flex;
+  gap: 2rem;                 /* spacing between card and form */
+  max-width: 900px;           /* overall width */
+  margin: 2rem auto;          /* center on page */
+  flex-wrap: wrap;            /* stack on smaller screens */
+  justify-content: center;    /* center horizontally */
+}
+
+/* Make sure the card and form scale nicely */
+.contact-card, .contact-form {
+  flex: 1 1 400px;           /* grow/shrink, min width 400px */
+  box-sizing: border-box;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -424,5 +440,17 @@ article ul ul {
   .site-footer {
     font-size: 0.9rem;
     padding: 1rem 0.5rem;
+  }
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-card, .contact-form {
+    flex: 1 1 100%;
   }
 }
