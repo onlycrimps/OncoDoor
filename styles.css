@@ -124,12 +124,12 @@ article ul ul {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* space between fields */
+  gap: 1rem; /* space between fields */
   background: white;
-  padding: 2rem;
+  padding: 1.25rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-width: 600px; /* keeps form from stretching too wide */
+  max-width: 500px; /* keeps form from stretching too wide */
   margin: 2rem auto; /* center form horizontally */
   font-family: var(--font-family);
 }
