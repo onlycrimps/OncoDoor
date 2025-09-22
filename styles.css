@@ -392,6 +392,7 @@ article ul ul {
 }
 
 @media (max-width: 600px) {
+  /* Hero Section */
   .hero-overlay {
     width: 90%;
     max-width: 800px;  /* same as articles */
@@ -402,7 +403,7 @@ article ul ul {
 
   .hero h1 {
     font-size: 2rem;
-    margin: 0 0 0.5rem 0; /* remove extra margin */
+    margin: 0 0 0.5rem 0; 
   }
 
   .hero p, .hero .hero-subtext {
@@ -417,22 +418,12 @@ article ul ul {
     margin-bottom: 0.5rem;
   }
 
-  /*.hero .button {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }*/
-
-
-@media (max-width: 600px) {
   /* Contact Section */
   .contact-section { max-width: 90%; margin: 1.5rem auto; }
   .contact-card, .contact-form { width: 100%; padding: 1rem; }
-   
-@media (max-width: 600px) {
+
   /* Meet the Team */
   .meet-the-team { max-width: 90%; margin: 1.5rem auto; }
   .team-member { flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
   .team-photo { width: 120px; height: 120px; margin-bottom: 1rem; }
 }
-
-
