@@ -1,8 +1,8 @@
-/* ==========================================================================
-   ==========================================================================
+/* ========================================================================== 
+   ========================================================================== 
    CSS MINI TABLE OF CONTENTS (TOC)
-   ==========================================================================
-   ==========================================================================
+   ========================================================================== 
+   ========================================================================== 
    1. Reset & Base Styles
    2. Navbar
    3. Hero Section
@@ -13,12 +13,12 @@
    7. Footer
    8. Logo Section
    9. Meet the Team Section
-   10. Responsive Adjustments
+  10. Responsive Adjustments
 =========================================================================== */
 
-/* ==========================================================================
+/* ========================================================================== 
    1. Reset & Base Styles
-   ========================================================================== */
+=========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -33,9 +33,9 @@ html, body {
   background-color: #111;
 }
 
-/* ==========================================================================
+/* ========================================================================== 
    2. Navbar
-   ========================================================================== */
+=========================================================================== */
 .navbar {
   background: #1a1a1a;
   padding: 1rem 2rem;
@@ -64,9 +64,9 @@ html, body {
   color: #00adb5;
 }
 
-/* ==========================================================================
-   3. Hero Section (Home Page Only)
-   ========================================================================== */
+/* ========================================================================== 
+   3. Hero Section
+=========================================================================== */
 .hero {
   position: relative;
   height: 60vh;
@@ -82,9 +82,8 @@ html, body {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 8px;
-   /* NEW: match width to articles */
-  max-width: 800px;  /* same as .blog-posts max-width */
-  margin: 0 auto;    /* center it horizontally */
+  max-width: 800px;  /* match article width */
+  margin: 0 auto;
 }
 
 .hero h1 {
@@ -92,36 +91,31 @@ html, body {
   margin-bottom: 0.5rem;
 }
 
-.hero p {
+.hero p, .hero .hero-subtext {
   font-size: 1.2rem;
 }
 
 /* Hero Image Bubble */
 .hero img {
-  width: 140px;              /* desktop size */
+  width: 140px;
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
   border: 3px solid #fff;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* ==========================================================================
+/* ========================================================================== 
    4. Main Content Section
-   ========================================================================== */
+=========================================================================== */
 main {
   padding: 3rem 1rem;
   background: #fff;
   color: #333;
 }
 
-/* --------------------------------------------------------------------------
-   4a. Blog Posts & Articles
-   -------------------------------------------------------------------------- */
 section.blog-posts {
   max-width: 800px;
   margin: auto;
@@ -140,7 +134,7 @@ article {
   border-left: 4px solid #444;
   border-radius: 4px;
   margin-bottom: 2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);   /*added to try and add shadows to articles*/  
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 article h3 {
@@ -148,7 +142,6 @@ article h3 {
   color: #222;
 }
 
-/* Article bullets */
 article ul {
   list-style-type: disc !important;
   list-style-position: outside;
@@ -164,35 +157,33 @@ article ul ul {
   padding-left: 2rem;
 }
 
-
 /* ========================================================================== 
-   5. Contact Section - stacked full-width card + form
-   ========================================================================== */
+   5. Contact Section
+=========================================================================== */
 .contact-section {
   display: flex;
-  flex-direction: column;   /* stack vertically */
-  gap: 1.5rem;              /* spacing between card and form */
-  max-width: 800px;         /* container width matches other content */
-  margin: 2rem auto;        /* center container */
-  align-items: stretch;     /* ensures both blocks take full width */
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px; /* matches articles */
+  margin: 2rem auto;
+  align-items: stretch;
 }
 
-/* Shared block styling */
 .contact-card,
 .contact-form {
-  width: 100%;              /* full width of container */
+  width: 100%;
   box-sizing: border-box;
-  background: #f8f8f8;      /* subtle gray */
+  background: #f8f8f8;
   border-left: 4px solid #444;
   border-radius: 8px;
-  padding: 1rem;             /* equal padding for both */
+  padding: 1rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Contact Directly Card */
+/* Contact Card */
 .contact-card h3 {
   margin-bottom: 0.5rem;
-  font-size: 1.25rem;       /* matches Questions? header */
+  font-size: 1.25rem;
 }
 
 .contact-card-content {
@@ -200,7 +191,7 @@ article ul ul {
   align-items: center;
   gap: 1rem;
   margin-top: 0.5rem;
-  flex-wrap: wrap;           /* stack photo/info on small screens */
+  flex-wrap: wrap;
 }
 
 .contact-photo {
@@ -231,7 +222,7 @@ article ul ul {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;             /* spacing between fields */
+  gap: 0.75rem;
   font-family: var(--font-family);
 }
 
@@ -268,10 +259,9 @@ article ul ul {
   background-color: #005fa3;
 }
 
-
-/* ==========================================================================
+/* ========================================================================== 
    6. Buttons (Reusable)
-   ========================================================================== */
+=========================================================================== */
 .button {
   background-color: #0077cc;
   color: white;
@@ -290,9 +280,9 @@ article ul ul {
   background-color: #005fa3;
 }
 
-/* ==========================================================================
+/* ========================================================================== 
    7. Footer
-   ========================================================================== */
+=========================================================================== */
 .site-footer {
   background-color: #222;
   color: white;
@@ -307,9 +297,9 @@ article ul ul {
   font-size: 1rem;
 }
 
-/* ==========================================================================
+/* ========================================================================== 
    8. Logo Section
-   ========================================================================== */
+=========================================================================== */
 .section-logo {
   display: block;
   margin: 1rem auto;
@@ -318,9 +308,9 @@ article ul ul {
   height: auto;
 }
 
-/* ==========================================================================
+/* ========================================================================== 
    9. Meet the Team Section
-   ========================================================================== */
+=========================================================================== */
 .meet-the-team {
   background: #f8f8f8;
   padding: 2rem;
@@ -381,97 +371,36 @@ article ul ul {
   color: #333;
 }
 
-
-/* ==========================================================================
+/* ========================================================================== 
    10. Responsive Adjustments
-   ========================================================================== */
-
-/* Small screens <= 600px */
-@media (max-width: 600px) {
-
- /* =========================
-   Hero Section - Mobile Adjustments
-   ========================= */
-@media (max-width: 600px) {
-
-  /* Shrink text for small screens */
-  .hero h1 {
-    font-size: 2rem;           /* smaller heading */
-    margin-bottom: 0.5rem;
-  }
-
-  .hero p, 
-  .hero .hero-subtext {
-    font-size: 1rem;           /* smaller paragraph */
-    line-height: 1.4;
-  }
-
-  /* Adjust the overlay box */
-  .hero-overlay {
-    width: 90%;                 /* keep some margin from edges */
-    max-width: 400px;           /* prevent it from being too wide */
-    padding: 1rem;              /* smaller padding */
-    box-sizing: border-box;     /* ensures padding doesn't exceed width */
-    border-radius: 8px;         /* keeps corners rounded */
-  }
-
-  /* Logo inside hero */
-  .section-logo {
-    max-width: 120px;           /* smaller logo */
-    width: 50%;                 /* scales responsively */
-    height: auto;
-    margin-bottom: 0.5rem;
-  }
-
-  /* Button adjustments */
-  .hero .button {
-    padding: 0.5rem 1rem;       /* smaller button */
-    font-size: 0.9rem;
-  }
+=========================================================================== */
+@media (max-width: 768px) {
+  .contact-section { gap: 1rem; }
+  .contact-form button { width: 100%; }
 }
 
-  /* Navbar */
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+@media (max-width: 600px) {
+
+  /* Hero */
+  .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+  .hero p, .hero .hero-subtext { font-size: 1rem; line-height: 1.4; }
+  .hero-overlay {
+    width: 90%;
+    max-width: 400px;
+    padding: 1rem;
+    margin: 0 auto;
   }
+  .section-logo { max-width: 120px; width: 50%; height: auto; }
+  .hero .button { padding: 0.5rem 1rem; font-size: 0.9rem; }
+
+  /* Contact Section */
+  .contact-section { max-width: 90%; margin: 1.5rem auto; }
+  .contact-card, .contact-form { width: 100%; padding: 1rem; }
 
   /* Meet the Team */
-  .meet-the-team {
-    padding: 1.5rem;
-    width: 90%;
-  }
-
-  .team-member {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .team-photo {
-    margin-bottom: 1rem;
-  }
-
-@media (max-width: 768px) {
-  .contact-section {
-    gap: 1rem;
-  }
-
-  .contact-form button {
-    width: 100%;  /* full-width button on small screens */
-  }
+  .meet-the-team { width: 90%; padding: 1.5rem; margin: 0 auto 2rem auto; }
+  .team-member { flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
+  .team-photo { width: 120px; height: 120px; margin-bottom: 1rem; }
 }
 
-/* for hero image Mobile: shrink bubble size for better fit */
-@media (max-width: 600px) {
-  .hero img {
-    width: 100px;
-    height: 100px;
-  }
-}
+
