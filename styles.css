@@ -393,15 +393,15 @@ article ul ul {
 @media (max-width: 600px) {
 
   /* Hero */
-  .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-  .hero p, .hero .hero-subtext { font-size: 1rem; line-height: 1.4; }
+  .hero h1 { font-size: 1.8rem; margin-bottom: 0.4rem; }
+  .hero p, .hero .hero-subtext { font-size: 0.9rem; line-height: 1.4; }
   .hero-overlay {
     width: 90%;         /* keeps margin from screen edges */
     max-width: 90%;   /* matches article container */
     padding: 1rem;      /* reduces padding for smaller screens */
     margin: 0 auto;     /* centers the box */
 }
-  .section-logo { max-width: 120px; width: 50%; height: auto; }
+  .section-logo { max-width: 100px; width: 40%; height: auto; }
   .hero .button { padding: 0.5rem 1rem; font-size: 0.9rem; }
 
   /* Contact Section */
