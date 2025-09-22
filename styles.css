@@ -401,12 +401,12 @@ article ul ul {
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     margin: 0 0 0.5rem 0; /* remove extra margin */
   }
 
   .hero p, .hero .hero-subtext {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     margin: 0;
     line-height: 1.4;
   }
