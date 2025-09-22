@@ -397,7 +397,7 @@ article ul ul {
   .hero p, .hero .hero-subtext { font-size: 1rem; line-height: 1.4; }
   .hero-overlay {
     width: 90%;         /* keeps margin from screen edges */
-    max-width: 800px;   /* matches article container */
+    max-width: 90%;   /* matches article container */
     padding: 1rem;      /* reduces padding for smaller screens */
     margin: 0 auto;     /* centers the box */
 }
