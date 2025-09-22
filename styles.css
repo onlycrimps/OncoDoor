@@ -392,19 +392,37 @@ article ul ul {
 }
 
 @media (max-width: 600px) {
-
-  /* Hero */
-  .hero h1 { font-size: 1.8rem; margin-bottom: 0.4rem; }
-  .hero p, .hero .hero-subtext { font-size: 0.9rem; line-height: 1.4; }
- .hero-overlay {
-    width: 90%;      /* keeps margin from edges */
-    max-width: 800px; /* stays same as articles */
-    padding: 0.75rem; 
+  .hero-overlay {
+    width: 90%;
+    max-width: 800px;  /* same as articles */
+    padding: 0.75rem;
     margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0; /* remove extra margin */
+  }
+
+  .hero p, .hero .hero-subtext {
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .section-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero .button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 }
-  .section-logo { max-width: 100px; width: 40%; height: auto; }
-  .hero .button { padding: 0.5rem 1rem; font-size: 0.9rem; }
+
 
   /* Contact Section */
   .contact-section { max-width: 90%; margin: 1.5rem auto; }
