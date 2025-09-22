@@ -417,6 +417,7 @@ article ul ul {
     height: 100px;
     margin-bottom: 0.5rem;
   }
+  /*.hero .button { padding: 0.5rem 1rem; font-size: 0.9rem; }*/
 
   /* Contact Section */
   .contact-section { max-width: 90%; margin: 1.5rem auto; }
