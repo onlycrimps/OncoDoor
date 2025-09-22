@@ -424,7 +424,7 @@ article ul ul {
 
   /* Mobile adjustments for contact & meet-the-team only */
   .contact-section { 
-    max-width: 90%; 
+    max-width: 100%; 
     margin: 1.5rem auto; 
   }
 
