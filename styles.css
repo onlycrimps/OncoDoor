@@ -409,7 +409,7 @@ article ul ul {
   .contact-card, .contact-form { width: 100%; padding: 1rem; }
 
   /* Meet the Team */
-  .meet-the-team { width: 90%; padding: 1.5rem; margin: 0 auto 2rem auto; }
+  .meet-the-team { max-width: 90%; margin: 1.5rem auto; }
   .team-member { flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
   .team-photo { width: 120px; height: 120px; margin-bottom: 1rem; }
 }
