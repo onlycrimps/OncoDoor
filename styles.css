@@ -300,12 +300,23 @@ article ul ul {
 /* ========================================================================== 
    8. Logo Section
 =========================================================================== */
+/* Hero logo pop-out effect */
 .section-logo {
+  width: 140px;               /* desktop size */
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;         /* makes it circular */
+  border: 3px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: block;
-  margin: 1rem auto;
-  max-width: 200px;
-  width: 50%;
-  height: auto;
+  margin: 0 auto 1rem auto;   /* center with bottom spacing */
+}
+
+/* Hover effect */
+.section-logo:hover {
+  transform: scale(1.05);     /* grow slightly */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35); /* stronger shadow */
 }
 
 /* ========================================================================== 
