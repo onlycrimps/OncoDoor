@@ -171,8 +171,7 @@ article ul ul {
 
 .contact-card,
 .contact-form {
-  /*width: 100%;*/
-  max-width: 800px; /* matches articles */
+  width: 100%;
   box-sizing: border-box;
   background: #f8f8f8;
   border-left: 4px solid #444;
@@ -418,10 +417,10 @@ article ul ul {
     margin-bottom: 0.5rem;
   }
 
-  .hero .button {
+  /*.hero .button {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
-  }
+  }*/
 
 
 @media (max-width: 600px) {
