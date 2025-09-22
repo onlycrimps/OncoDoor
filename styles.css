@@ -171,7 +171,8 @@ article ul ul {
 
 .contact-card,
 .contact-form {
-  width: 100%;
+  /*width: 100%;*/
+  max-width: 800px; /* matches articles */
   box-sizing: border-box;
   background: #f8f8f8;
   border-left: 4px solid #444;
@@ -421,13 +422,14 @@ article ul ul {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
   }
-}
 
 
+@media (max-width: 600px) {
   /* Contact Section */
   .contact-section { max-width: 90%; margin: 1.5rem auto; }
   .contact-card, .contact-form { width: 100%; padding: 1rem; }
-
+   
+@media (max-width: 600px) {
   /* Meet the Team */
   .meet-the-team { max-width: 90%; margin: 1.5rem auto; }
   .team-member { flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
