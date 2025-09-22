@@ -423,7 +423,7 @@ article ul ul {
   }
 
   /* Mobile adjustments for contact & meet-the-team only */
-  .contact-section { 
+  /*.contact-section { 
     max-width: 100%; 
     margin: 1.5rem auto; 
   }
@@ -436,7 +436,7 @@ article ul ul {
   .meet-the-team { 
     max-width: 100%; 
     margin: 1.5rem auto; 
-  }
+  }*/
 
   .team-member { 
     flex-direction: column; 
