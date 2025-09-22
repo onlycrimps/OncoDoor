@@ -389,9 +389,46 @@ article ul ul {
 /* Small screens <= 600px */
 @media (max-width: 600px) {
 
-  /* Hero */
-  .hero h1 { font-size: 2rem; }
-  .hero p { font-size: 1rem; }
+ /* =========================
+   Hero Section - Mobile Adjustments
+   ========================= */
+@media (max-width: 600px) {
+
+  /* Shrink text for small screens */
+  .hero h1 {
+    font-size: 2rem;           /* smaller heading */
+    margin-bottom: 0.5rem;
+  }
+
+  .hero p, 
+  .hero .hero-subtext {
+    font-size: 1rem;           /* smaller paragraph */
+    line-height: 1.4;
+  }
+
+  /* Adjust the overlay box */
+  .hero-overlay {
+    width: 90%;                 /* keep some margin from edges */
+    max-width: 400px;           /* prevent it from being too wide */
+    padding: 1rem;              /* smaller padding */
+    box-sizing: border-box;     /* ensures padding doesn't exceed width */
+    border-radius: 8px;         /* keeps corners rounded */
+  }
+
+  /* Logo inside hero */
+  .section-logo {
+    max-width: 120px;           /* smaller logo */
+    width: 50%;                 /* scales responsively */
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Button adjustments */
+  .hero .button {
+    padding: 0.5rem 1rem;       /* smaller button */
+    font-size: 0.9rem;
+  }
+}
 
   /* Navbar */
   .navbar ul {
