@@ -140,6 +140,7 @@ article {
   border-left: 4px solid #444;
   border-radius: 4px;
   margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);   /*added to try and add shadows to articles*/  
 }
 
 article h3 {
