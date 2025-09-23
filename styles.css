@@ -459,8 +459,10 @@ article ul ul {
 /*=================================ALPHA ONLY CHANGES===============================================*/
 /*==================================================================================================*/
 /*==================================================================================================*/
+/*==================================================================================================*/
 
-
+/*==================================================================================================*/
+/*=====================================service page styling=========================================*/
 /* Services Page Styling */
 .services-intro {
   max-width: 800px;
@@ -509,3 +511,36 @@ article ul ul {
   color: #666;
   font-style: italic;
 }
+
+/* --- Mobile Adjustments for Services Page --- */
+@media (max-width: 600px) {
+  .services-intro {
+    padding: 1rem;
+    margin: 1rem auto;
+    font-size: 0.95rem;
+  }
+
+  .services-list {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .service-card {
+    padding: 1rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .service-card ul {
+    padding-left: 1rem;
+  }
+
+  .service-image-placeholder {
+    height: 120px;
+    font-size: 0.9rem;
+  }
+}
+/*========================================= Service End================*/
