@@ -515,6 +515,7 @@ article ul ul {
 /* Why It Matters Section */
 .service-example {
   display: flex;
+  max-width: 800px;
   align-items: flex-start;
   gap: 1.5rem;
   background: #f8f8f8;
