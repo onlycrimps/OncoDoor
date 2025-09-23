@@ -527,11 +527,13 @@ article ul ul {
 }
 
 .service-photo {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
+  width: 100%;             /* scale to container width */
+  max-width: 200px;        /* caps size on desktop */
+  height: auto;            /* maintain aspect ratio */
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 0 auto 1rem auto; /* center with spacing below */
+  display: block;
 }
 
 .service-text h3 {
@@ -584,10 +586,9 @@ article ul ul {
     align-items: center;
   }
 
+  @media (max-width: 600px) {
   .service-photo {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
+    max-width: 120px;      /* smaller for mobile */
   }
 }
 /*========================================= Service End================*/
