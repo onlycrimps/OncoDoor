@@ -527,15 +527,13 @@ article ul ul {
 }
 
 .service-photo {
-  height: 200px;       /* fixed height */
-  width: auto;         /* width scales naturally */
-  max-width: 100%;     /* prevent overflow */
-  object-fit: contain; /* no cropping, may leave white space */
+  width: 200px;       /* fixed width */
+  height: 400px;      /* fixed height */
+  object-fit: cover;  /* crops image evenly, keeps proportions */
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   margin: 0 auto 1rem auto;
   display: block;
-  background: #f8f8f8; /* optional — filler for empty space */
 }
 
 
