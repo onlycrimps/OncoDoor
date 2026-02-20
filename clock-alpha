@@ -1,1 +1,77 @@
-// stay tuned
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days Since Last Incident</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .counter-container {
+            background-color: #000;
+            border: 10px solid #555;
+            padding: 20px 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+            color: #ccc;
+        }
+        #days-count {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #ff0000;
+            text-shadow: 0 0 15px #ff0000;
+            margin: 0;
+            font-family: 'Arial Black', Gadget, sans-serif;
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0 0 0;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <h1>DAYS SINCE LAST INCIDENT</h1>
+        <div id="days-count">0</div>
+        <p>SAFETY FIRST</p>
+    </div>
+
+    <script>
+        // --- CONFIGURATION ---
+        const lastIncidentDate = "2026-02-17"; // Set date as YYYY-MM-DD
+        // ---------------------
+
+        function updateCounter() {
+            const start = new Date(lastIncidentDate);
+            const now = new Date();
+            const diffTime = Math.abs(now - start);
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            
+            document.getElementById("days-count").innerText = diffDays;
+        }
+
+        updateCounter();
+        // Update once per hour in case user keeps page open
+        setInterval(updateCounter, 3600000); 
+    </script>
+
+ <footer class="site-footer">
+  <p>2026 OncoDoor. Nationwide Servicing and Emergency Response.</p>
+ </footer>
+
+</body>
+</html>
